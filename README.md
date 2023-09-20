@@ -33,3 +33,50 @@ Note:
 
 The code uses the Quicksort algorithm for efficient string sorting.
 Empty strings are not considered anagrams.
+
+
+Challenge Title: Message Encryption
+
+Description:
+This coding challenge involves the creation of a function to encrypt messages using a given key. The encryption algorithm involves dividing the message into two parts and reversing them based on the provided key.
+
+Function Signature:
+
+python
+Copy code
+def encrypt_message(message: str, key: int) -> str:
+    # Function to encrypt a message using a key
+    pass
+Input:
+
+message (str): The input message to be encrypted.
+key (int): The encryption key used to determine the division and reversal of the message.
+Output:
+
+Returns the encrypted message as a string.
+Example:
+
+python
+Copy code
+encrypted = encrypt_message("Hello, World!", 3)
+print(encrypted)  # Output: "leHlo, Wo_dlr!"
+
+encrypted = encrypt_message("Python is fun", 6)
+print(encrypted)  # Output: "sixf___nys htoP"
+Explanation:
+The encrypt_message function takes an input message and an encryption key. It performs the following steps:
+
+It checks the validity of the input types and raises a TypeError if either the key is not an integer or the message is not a string.
+
+It checks if the key is within a valid range (1 to the length of the message). If not, it reverses the entire message.
+
+If the key is within the valid range, it divides the message into two parts: the first part contains the characters before the key index, and the second part contains the characters after the key index.
+
+Depending on whether the key is even or odd, it reverses the order of the two parts.
+
+It joins the reversed parts with an underscore "_" and returns the encrypted message.
+
+Note:
+
+The encryption algorithm involves reversing portions of the message based on the key.
+The key must be an integer, and the message must be a string for the function to work properly.
