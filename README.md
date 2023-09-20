@@ -80,3 +80,49 @@ Note:
 
 The encryption algorithm involves reversing portions of the message based on the key.
 The key must be an integer, and the message must be a string for the function to work properly.
+
+
+Challenge Title: Palindrome Checker (Recursive)
+
+Description:
+This coding challenge involves the creation of a recursive function to check whether a provided string is a palindrome. A palindrome is a word, phrase, or sequence of characters that reads the same forwards and backward.
+
+Function Signature:
+
+python
+Copy code
+def is_palindrome_recursive(word: str, low_index: int, high_index: int) -> bool:
+    # Recursive function to check if a string is a palindrome
+    pass
+Input:
+
+word (str): The input string to be checked for palindrome status.
+low_index (int): The lower index used for checking.
+high_index (int): The higher index used for checking.
+Output:
+
+Returns a boolean value (True if the input string is a palindrome, False otherwise).
+Example:
+
+python
+Copy code
+result = is_palindrome_recursive("racecar", 0, 6)
+print(result)  # Output: True
+
+result = is_palindrome_recursive("hello", 0, 4)
+print(result)  # Output: False
+Explanation:
+The is_palindrome_recursive function takes an input string word and two index values low_index and high_index. It performs the following steps recursively:
+
+It checks if the input word is empty, in which case it returns False because an empty string is not a palindrome.
+
+It checks if low_index has surpassed or reached high_index, in which case it returns True because all necessary comparisons have been made, indicating a palindrome.
+
+It checks if the characters at positions low_index and high_index in the word are not equal. If they are not equal, it returns False because characters do not match, indicating that the string is not a palindrome.
+
+If none of the above conditions are met, it recursively calls the function with an incremented low_index and a decremented high_index.
+
+Note:
+
+The function uses recursion to compare characters from both ends of the string until all necessary comparisons are made.
+An empty string is not considered a palindrome.
