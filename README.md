@@ -1,4 +1,4 @@
-Challenge Title: Anagram Detector
+**Challenge Title: Anagram Detector**
 
 Description:
 This coding challenge focuses on implementing a function to detect whether two given strings are anagrams of each other. An anagram is a word or phrase formed by rearranging the letters of another word or phrase, typically using all the original letters exactly once.
@@ -35,7 +35,7 @@ The code uses the Quicksort algorithm for efficient string sorting.
 Empty strings are not considered anagrams.
 
 
-Challenge Title: Message Encryption
+**Challenge Title: Message Encryption**
 
 Description:
 This coding challenge involves the creation of a function to encrypt messages using a given key. The encryption algorithm involves dividing the message into two parts and reversing them based on the provided key.
@@ -82,7 +82,7 @@ The encryption algorithm involves reversing portions of the message based on the
 The key must be an integer, and the message must be a string for the function to work properly.
 
 
-Challenge Title: Palindrome Checker (Recursive)
+**Challenge Title: Palindrome Checker (Recursive)**
 
 Description:
 This coding challenge involves the creation of a recursive function to check whether a provided string is a palindrome. A palindrome is a word, phrase, or sequence of characters that reads the same forwards and backward.
@@ -126,3 +126,46 @@ Note:
 
 The function uses recursion to compare characters from both ends of the string until all necessary comparisons are made.
 An empty string is not considered a palindrome.
+
+**Challenge Title: Study Schedule**
+
+Description:
+This coding challenge involves the creation of a function designed to count the number of study periods for students in a study schedule that include a specific "target_time." The study schedule is represented as a list of periods, where each period is defined by a start time and an end time. The goal is to determine how many study periods include the specified "target_time."
+
+Function Signature:
+
+python
+Copy code
+def study_schedule(permanence_period, target_time):
+    # Function to calculate the number of study periods that include the target_time
+    pass
+Input:
+
+permanence_period (list of tuples): A list of tuples representing study periods, where each tuple contains two elements - the start time and end time of a study period.
+target_time (int): The specific time to be checked.
+Output:
+
+Returns an integer representing the count of study periods within permanence_period that include the target_time.
+Example:
+
+python
+Copy code
+study_periods = [(8, 10), (12, 14), (15, 18)]
+result = study_schedule(study_periods, 13)
+print(result)  # Output: 1 (13 is included in the study period (12, 14))
+Explanation:
+The study_schedule function serves to count the number of study periods for students in a study schedule that include the specified target_time. It follows these steps:
+
+It initializes a period_counter variable to zero, which keeps track of the number of study periods that include the target_time.
+
+It iterates over each study period in the permanence_period list.
+
+For each study period, it checks if the target_time falls within that period (between the start and end times). If the target_time is within the period, the period_counter is incremented by 1.
+
+If any exceptions (like TypeError) occur during the iteration, it returns None.
+
+Finally, it returns the period_counter as the result, indicating how many study periods include the specified target_time.
+
+Note:
+
+This code snippet provides a way to count study periods within a student's study schedule that cover a specific time of interest, making it useful for time management and study planning.
